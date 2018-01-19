@@ -10,13 +10,11 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-  valid = nil
- if (!position_taken? && index.between(0,8))
-   valid = true
+ if (!position_taken?(board, index) && index.between(0,8))
+   return true
  else
-   valid = false
+   return false
  end
- valid
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
